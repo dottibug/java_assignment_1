@@ -6,8 +6,6 @@ $discount_percent = filter_input(INPUT_POST, "discount_percent");
 define('SALES_TAX_RATE', 0.2); // 8% sales tax
 define('SALES_TAX', '8%');
 
-$error_message = '';
-
 // Convert input to HTML entities
 $product_description = htmlspecialchars($product_description);
 $list_price = htmlspecialchars($list_price);
@@ -24,6 +22,8 @@ if (empty($product_description)) {
     $error_message = 'Please enter a discount percent.';
 } elseif (!is_numeric($discount_percent)) {
     $error_message = 'The discount percent must be a number.';
+} else {
+    $error_message = '';
 }
 
 // Show index page if an error message exists
