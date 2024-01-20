@@ -49,7 +49,7 @@ $total_price = '$' . number_format($total_price, 2);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Product Discount Calculator</title>
     <link rel="stylesheet" type="text/css" href="main.css">

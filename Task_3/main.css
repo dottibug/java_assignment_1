@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5rem;
+}
+
+main {
+    border: 0.2rem solid gray;
+    margin: auto;
+    padding: 1rem 3rem;
+    width: 500px;
+}
+
+h1 {
+    color: royalblue;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.label_input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    width: 15%;
+    font-weight: 600;
+    color: dimgray;
+    text-transform: uppercase;
+}
+
+input {
+    font-size: 1rem;
+    padding: 0.4rem;
+    height: 1.6em;
+}
+
+button {
+    background-color: royalblue;
+    border: none;
+    padding: 0.8rem;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    width: 40%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 2rem;
+}
+
+h2 {
+    color: dimgray;
+}
+
+.error {
+    height: 2rem;
+    font-weight: 600;
+    color: palevioletred;
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+}

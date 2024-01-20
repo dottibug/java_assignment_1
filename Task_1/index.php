@@ -6,7 +6,7 @@ if (!isset($discount_percent)) $discount_percent = '';
 ?>
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <title>Product Discount Calculator</title>
     <link rel="stylesheet" type="text/css" href="main.css">
