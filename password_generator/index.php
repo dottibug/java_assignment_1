@@ -1,7 +1,13 @@
 <?php
+// Initial values
+$word_1 = $word_1 ?? '';
+$word_2 = $word_2 ?? '';
+$word_3 = $word_3 ?? '';
+$word_4 = $word_4 ?? '';
+
 $show_passwords = false;
 
-// Process form submission or form reset
+// Handle form submission or form reset
 $action = filter_input(INPUT_POST, 'action');;
 
 switch ($action) {
@@ -32,23 +38,16 @@ switch ($action) {
             }
         }
 
-        // Convert to HTML entities and transform text to uppercase
-        // NOTE: mutates the original $words_array
-        foreach ($words_array as &$w) {
-            $w = htmlspecialchars($w);
-            $w = strtoupper($w);
-        }
-        
-        // Shuffle and create 4 password suggestions
-        $words_uppercase = implode($words_array);
+        // Shuffle, transform to uppercase, and create 4 password suggestions
+        $words = implode($words_array);
+
         $shuffled_words = array();
         for ($i = 0; $i <= 3; $i++) {
-            $shuffled_words[$i] = str_shuffle($words_uppercase);
+            $shuffled_words[$i] = str_shuffle(strtoupper($words));
         }
 
         // Render passwords
         if (empty($error_message)) $show_passwords = true;
-
         break;
 
     case 'reset_form':
@@ -56,9 +55,7 @@ switch ($action) {
         $word_2 = '';
         $word_3 = '';
         $word_4 = '';
-
         break;
 
 }
-include 'random_passwords.php';
-?>
+include 'password_generator.php';

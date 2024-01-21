@@ -1,8 +1,13 @@
 <?php
+// Initial values
+$name = $name ?? '';
+$email = $email ?? '';
+$phone = $phone ?? '';
 $message = 'Enter some data and click the \'Submit\' button.';
 
-// Process Form Submission
+// Process form submission
 $action = filter_input(INPUT_POST, 'action');
+
 switch ($action) {
     case 'form_submitted':
 
@@ -28,7 +33,7 @@ switch ($action) {
             // Remove everything but digits from phone number
             $phone_pattern = '/[^0-9]/';
             $phone_formatted = preg_replace($phone_pattern, '', $phone);
-
+            // Check phone number length
             if (strlen($phone_formatted) < 7) {
                 $error_message = "Phone number must contain at least 7 digits.";
                 break;
@@ -36,11 +41,6 @@ switch ($action) {
                 $error_message = '';
             }
         }
-
-        // Convert input to HTML entities
-        $name = htmlspecialchars($name);
-        $email = htmlspecialchars($email);
-        $phone = htmlspecialchars($phone);
 
         // Format name
         $name_lowercase = strtolower($name);
@@ -78,4 +78,3 @@ MESSAGE;
 }
 
 include 'string_tester.php';
-?>

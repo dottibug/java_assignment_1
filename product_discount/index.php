@@ -16,12 +16,12 @@ if (!isset($discount_percent)) $discount_percent = '';
 <main>
     <h1>Product Discount Calculator</h1>
 
+    <!--  Conditionally render error message  -->
     <?php if (!empty($error_message)): ?>
         <p class="error_message"> <?php echo $error_message ?> </p>
     <?php endif ?>
 
     <form action="display_discount.php" method="post">
-
         <div id="data">
             <label for="product_description">Product Description:</label>
             <input type="text" id="product_description" name="product_description"
@@ -40,7 +40,6 @@ if (!isset($discount_percent)) $discount_percent = '';
             <label>&nbsp;</label>
             <input type="submit" value="Calculate Discount"><br>
         </div>
-
     </form>
 </main>
 </body>

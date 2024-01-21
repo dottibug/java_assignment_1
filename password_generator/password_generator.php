@@ -1,10 +1,5 @@
 <?php
-// Initial values
-$word_1 = $word_1 ?? '';
-$word_2 = $word_2 ?? '';
-$word_3 = $word_3 ?? '';
-$word_4 = $word_4 ?? '';
-
+/////////////////////// ADD COMMENTS ABOUT PROGRAM
 ?>
 
 <!DOCTYPE html>
@@ -30,17 +25,17 @@ $word_4 = $word_4 ?? '';
         <div class="word_inputs">
             <div class="label_input">
                 <label for="word_1">Word 1</label>
-                <input type="text" name="word_1" id="word_1" value="<?php echo $word_1 ?>">
+                <input type="text" name="word_1" id="word_1" value="<?php echo htmlspecialchars($word_1) ?>">
             </div>
 
             <div class="label_input">
                 <label for="word_2">Word 2</label>
-                <input type="text" name="word_2" id="word_2" value="<?php echo $word_2 ?>">
+                <input type="text" name="word_2" id="word_2" value="<?php echo htmlspecialchars($word_2) ?>">
             </div>
 
             <div class="label_input">
                 <label for="word_3">Word 3</label>
-                <input type="text" name="word_3" id="word_3" value="<?php echo $word_3 ?>">
+                <input type="text" name="word_3" id="word_3" value="<?php echo htmlspecialchars($word_3) ?>">
             </div>
 
             <div class="label_input">

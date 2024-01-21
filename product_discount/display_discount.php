@@ -1,15 +1,9 @@
 <?php
+
+// Get input data
 $product_description = filter_input(INPUT_POST, "product_description");
 $list_price = filter_input(INPUT_POST, "list_price");
 $discount_percent = filter_input(INPUT_POST, "discount_percent");
-
-define('SALES_TAX_RATE', 0.2); // 8% sales tax
-define('SALES_TAX', '8%');
-
-// Convert input to HTML entities
-$product_description = htmlspecialchars($product_description);
-$list_price = htmlspecialchars($list_price);
-$discount_percent = htmlspecialchars($discount_percent);
 
 // Validate product_description, list_price, and discount_percent
 if (empty($product_description)) {
@@ -33,6 +27,9 @@ if (!empty($error_message)) {
 }
 
 // Calculate discount, sales tax, and total price
+define('SALES_TAX_RATE', 0.2); // 8% sales tax
+define('SALES_TAX', '8%');
+
 $discount_amount = $list_price * $discount_percent * .01;
 $discount_price = $list_price - $discount_amount;
 $sales_tax_amount = $discount_price * SALES_TAX_RATE;
@@ -62,26 +59,26 @@ $total_price = '$' . number_format($total_price, 2);
     <span><?php echo htmlspecialchars($product_description); ?></span><br>
 
     <label>List Price:</label>
-    <span><?php echo $list_price; ?></span><br>
+    <span><?php echo htmlspecialchars($list_price); ?></span><br>
 
     <label>Standard Discount:</label>
-    <span><?php echo $discount_percent; ?></span><br>
+    <span><?php echo htmlspecialchars($discount_percent); ?></span><br>
 
     <label>Discount Amount:</label>
-    <span><?php echo $discount_amount; ?></span><br>
+    <span><?php echo htmlspecialchars($discount_amount); ?></span><br>
 
     <label>Discount Price:</label>
-    <span><?php echo $discount_price; ?></span><br><br>
+    <span><?php echo htmlspecialchars($discount_price); ?></span><br><br>
 
     <label>Sales Tax Rate:</label>
-    <span><?php echo SALES_TAX ?></span><br>
+    <span><?php echo SALES_TAX; ?></span><br>
 
     <label>Sales Tax Amount:</label>
-    <span><?php echo $sales_tax_amount ?></span><br><br>
+    <span><?php echo htmlspecialchars($sales_tax_amount); ?></span><br><br>
 
     <div class="total_price">
         <label>Total Price:</label>
-        <span><?php echo $total_price ?></span>
+        <span><?php echo htmlspecialchars($total_price); ?></span>
     </div>
 
 </main>

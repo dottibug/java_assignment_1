@@ -1,8 +1,5 @@
 <?php
-// Initial values
-$name = $name ?? '';
-$email = $email ?? '';
-$phone = $phone ?? '';
+//////////////// ADD COMMEnts
 
 ?>
 
@@ -16,6 +13,7 @@ $phone = $phone ?? '';
 <main>
     <h1>String Tester</h1>
 
+    <!-- Conditionally render error message  -->
     <?php if (!empty($error_message)) : ?>
         <div class="error">
             <p><?php echo $error_message ?></p>
@@ -27,17 +25,17 @@ $phone = $phone ?? '';
 
         <div class="label_input">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="<?php echo $name ?>">
+            <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>">
         </div>
 
         <div class="label_input">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="<?php echo $email ?>">
+            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
         </div>
 
         <div class="label_input">
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" value="<?php echo $phone ?>">
+            <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
         </div>
 
         <button type="submit" name="submit">Submit</button>
