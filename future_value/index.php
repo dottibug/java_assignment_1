@@ -1,4 +1,14 @@
 <?php
+// -------------------------------------------------------------------------
+// Author: Tanya Woodside
+//
+// COMP 3541 Assignment 1
+//
+// Summary: This program calculates the future value of an investment based
+// on an interest rate compounded over a number of years. There is also an
+// option to compound the interest monthly.
+// -------------------------------------------------------------------------
+
 // Initial values
 $investment = $investment ?? '';
 $interest_rate = $interest_rate ?? '';
@@ -83,3 +93,5 @@ if ($action === 'calculate') {
 }
 
 include 'future_value_calculator.php';
+
+

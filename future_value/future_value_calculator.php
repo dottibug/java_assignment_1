@@ -1,7 +1,3 @@
-<?php
-/////////////// ADD COMMENTS
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

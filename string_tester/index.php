@@ -1,4 +1,13 @@
 <?php
+// -------------------------------------------------------------------------
+// Author: Tanya Woodside
+//
+// COMP 3541 Assignment 1
+//
+// Summary: This program takes user input of name, email, and phone number
+// and returns a formatted summary of the data.
+// -------------------------------------------------------------------------
+
 // Initial values
 $name = $name ?? '';
 $email = $email ?? '';
@@ -35,7 +44,7 @@ switch ($action) {
             $phone_formatted = preg_replace($phone_pattern, '', $phone);
             // Check phone number length
             if (strlen($phone_formatted) < 7) {
-                $error_message = "Phone number must contain at least 7 digits.";
+                $error_message = "Phone number must be at least 7 digits.";
                 break;
             } else {
                 $error_message = '';

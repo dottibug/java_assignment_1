@@ -1,4 +1,13 @@
 <?php
+// -------------------------------------------------------------------------
+// Author: Tanya Woodside
+//
+// COMP 3541 Assignment 1
+//
+// Summary: This program allows a user to create a list of tasks. Tasks
+// can be modified, promoted, demoted, sorted alphabetically, and deleted.
+// -------------------------------------------------------------------------
+
 //get tasklist array from POST
 $task_list = filter_input(INPUT_POST, 'tasklist',
     FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);

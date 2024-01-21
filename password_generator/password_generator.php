@@ -1,7 +1,3 @@
-<?php
-/////////////////////// ADD COMMENTS ABOUT PROGRAM
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

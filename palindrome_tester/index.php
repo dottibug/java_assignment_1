@@ -1,4 +1,13 @@
 <?php
+// -------------------------------------------------------------------------
+// Author: Tanya Woodside
+//
+// COMP 3541 Assignment 1
+//
+// Summary: This program tests whether a word or phrase is or is not a
+// standard or perfect palindrome. There is also an option to reset the form.
+// -------------------------------------------------------------------------
+
 // Initial values
 $word = $word ?? '';
 $show_results = false;

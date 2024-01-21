@@ -1,4 +1,13 @@
 <?php
+// -------------------------------------------------------------------------
+// Author: Tanya Woodside
+//
+// COMP 3541 Assignment 1
+//
+// Summary: This program takes four words as inputs, then joins and shuffles
+// them to create four password suggestions.
+// -------------------------------------------------------------------------
+
 // Initial values
 $word_1 = $word_1 ?? '';
 $word_2 = $word_2 ?? '';
@@ -8,7 +17,7 @@ $word_4 = $word_4 ?? '';
 $show_passwords = false;
 
 // Handle form submission or form reset
-$action = filter_input(INPUT_POST, 'action');;
+$action = filter_input(INPUT_POST, 'action');
 
 switch ($action) {
     case 'form_submitted':

@@ -1,4 +1,14 @@
 <?php
+// -------------------------------------------------------------------------
+// Author: Tanya Woodside
+//
+// COMP 3541 Assignment 1
+//
+// Summary: This program calculates the discount on a product, as well as
+// an 8% sales tax and the total price of the product inclusive of the
+// discount and sales tax.
+// -------------------------------------------------------------------------
+
 // Default values
 if (!isset($product_description)) $product_description = '';
 if (!isset($list_price)) $list_price = '';
